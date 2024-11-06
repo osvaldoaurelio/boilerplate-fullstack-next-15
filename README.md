@@ -235,3 +235,12 @@ pa @types/bcryptjs prisma -D
 *Instala as dependências de desenvolvimento.*
 
 ---
+
+```bash
+px prisma init --datasource-provider sqlite --preview-feature prismaSchemaFolder --preview-feature multiSchema
+```
+
+*Inicializa o Prisma com o provedor SQLite, habilita recursos de primaSchemaFolder e multiSchema.*
+
+---
+
