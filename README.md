@@ -201,4 +201,19 @@ Para entrar em contato comigo, siga-me nas redes:
 
 ---
 
-npx create-next-app@latest . --ts --tailwind --eslint --app --src-dir --turbopack --use-pnpm --skip-install --no-import-alias
+## Construindo o projeto
+
+
+```bash
+px create-next-app@latest . --ts --tailwind --eslint --app --src-dir --turbopack --use-pnpm --skip-install --no-import-alias
+```
+
+*Cria um projeto Next.js com TypeScript, Tailwind CSS, ESLint, App Routes, diretório src, turbopack para modo development, pnpm como gerenciador de pacotes, sem instalar dependências e sem personalizar o alias de importação.*
+
+---
+
+```bash
+px shadcn@latest init -d
+```
+
+*Configura o shadcn/ui no projeto com style New York, cor Zinc e utiliza variáveis CSS para cores.*
