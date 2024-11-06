@@ -244,3 +244,26 @@ px prisma init --datasource-provider sqlite --preview-feature prismaSchemaFolder
 
 ---
 
+```bash
+px prisma migrate dev --name init
+```
+
+*Cria a primeira migração do Prisma e gera o Prisma Client.*
+
+---
+
+> **Comandos úteis para o Prisma:**
+>
+>```bash
+>px prisma generate
+>```
+>
+>*Gera o Prisma Client.*
+>
+>```bash
+>px prisma studio
+>```
+>
+>*Inicia o studio do Prisma.*
+
+---
