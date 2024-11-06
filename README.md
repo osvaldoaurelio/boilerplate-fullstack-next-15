@@ -217,3 +217,21 @@ px shadcn@latest init -d
 ```
 
 *Configura o shadcn/ui no projeto com style New York, cor Zinc e utiliza variáveis CSS para cores.*
+
+---
+
+```bash
+pa @prisma/client @auth/prisma-adapter bcryptjs next-auth@beta next-intl next-themes zod
+```
+
+*Instala as dependências necessárias para o projeto.*
+
+---
+
+```bash
+pa @types/bcryptjs prisma -D
+```
+
+*Instala as dependências de desenvolvimento.*
+
+---
