@@ -267,3 +267,11 @@ px prisma migrate dev --name init
 >*Inicia o studio do Prisma.*
 
 ---
+
+```bash
+px shadcn@latest add button card dropdown-menu input label select skeleton toast
+```
+
+*Adiciona componentes do shadcn/ui ao projeto.*
+
+---
