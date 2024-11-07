@@ -1,0 +1,11 @@
+{
+  "LocaleToggle": {
+    "en": "English",
+    "es": "Spanish",
+    "pt": "Portuguese"
+  },
+  "HomePage": {
+    "title": "Hello world!",
+    "subtitle": "Welcome to boilerplate fullstack Next.js."
+  }
+}
