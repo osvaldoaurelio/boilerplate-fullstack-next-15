@@ -10,7 +10,7 @@ import {
 } from "@/components/ui";
 import { FLAG } from "@/constants/locales";
 import { locales, type Locale } from "@/i18n/config";
-import { getUserLocale, setUserLocale } from "@/services/i18n/locale";
+import { getUserLocale, setUserLocale } from "@/server/services/i18n/locale";
 import { useTranslations } from "next-intl";
 import { useEffect, useState, useTransition } from "react";
 
@@ -33,7 +33,7 @@ export function LocaleToggle() {
   function toggleLocale(newLocale: Locale) {
     startTransition(() => {
       setUserLocale(newLocale);
-      setLocale(newLocale)
+      setLocale(newLocale);
     });
   }
 
@@ -42,7 +42,7 @@ export function LocaleToggle() {
       <DropdownMenuTrigger asChild aria-busy={isPending} className={isPending ? 'pointer-events-none opacity-60' : ''}>
         <Button variant="outline" size="icon">
           {locale === '' ? <Skeleton className="h-[15] w-[20] rounded-none" /> : FLAG[locale]}
-          <span className="sr-only">Toggle locale</span>
+          <span className="sr-only">{t('title')}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

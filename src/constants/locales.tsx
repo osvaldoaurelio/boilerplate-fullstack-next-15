@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export const FLAG = {
-  en: <Image src='/assets/flags/us.svg' alt="us flag" width={20} height={16} />,
-  es: <Image src='/assets/flags/mx.svg' alt="mx flag" width={20} height={16} />,
-  pt: <Image src='/assets/flags/br.svg' alt="br flag" width={20} height={16} />,
-};
+export const COOKIE_LOCALE = 'bfn.next.i18n.locale';
 
-export const COOKIE_NAME = 'NEXT_LOCALE';
+export const FLAG = {
+  'en-US': <Image src='/assets/flags/us.svg' alt="US" width={20} height={16} />,
+  'es-MX': <Image src='/assets/flags/mx.svg' alt="MX" width={20} height={16} />,
+  'pt-BR': <Image src='/assets/flags/br.svg' alt="BR" width={20} height={16} />,
+};

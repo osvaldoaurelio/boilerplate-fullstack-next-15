@@ -1,0 +1,67 @@
+{
+  "ThemeToggle": {
+    "title": "Alternar tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "LocaleToggle": {
+    "title": "Mudar idioma",
+    "en-US": "Inglês",
+    "es-MX": "Espanhol",
+    "pt-BR": "Português"
+  },
+  "LogOutBtn": {
+    "label": "Sair",
+    "Toast": {
+      "success": "Deslogado com sucesso"
+    }
+  },
+  "Pages": {
+    "Home": {
+      "title": "Olá mundo!",
+      "subtitle": "Bem-vindo ao boilerplate fullstack Next.js.",
+      "Buttons": {
+        "dashboard": "Ir para o dashboard",
+        "login": "Ir para o login",
+        "register": "Ir para o registro"
+      }
+    },
+    "NotFound": {
+      "title": "Página não encontrada - 404",
+      "subtitle": "Desculpe, a página que você está procurando não existe.",
+      "backToHomeBtn": "Voltar para a página inicial"
+    },
+    "Dashboard": {
+      "title": "Olá mundo do dashboard!",
+      "subtitle": "Bem-vindo ao boilerplate fullstack Next.js."
+    },
+    "Login": {
+      "title": "Login",
+      "subtitle": "Por favor, faça login para continuar",
+      "Form": {
+        "email": "Email",
+        "password": "Senha",
+        "submit": "Login",
+        "Errors": {
+          "invalidCredentials": "Credenciais inválidas",
+          "unknownError": "Erro desconhecido"
+        }
+      }
+    },
+    "Register": {
+      "title": "Cadastro",
+      "subtitle": "Por favor, registre-se para continuar",
+      "Form": {
+        "name": "Nome",
+        "email": "Email",
+        "password": "Senha",
+        "submit": "Cadastrar",
+        "Errors": {
+          "userAlreadyExist": "Usuário já existe",
+          "unknownError": "Erro desconhecido"
+        }
+      }
+    }
+  }
+}

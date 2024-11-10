@@ -1,0 +1,67 @@
+{
+  "ThemeToggle": {
+    "title": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "LocaleToggle": {
+    "title": "Change language",
+    "en-US": "English",
+    "es-MX": "Spanish",
+    "pt-BR": "Portuguese"
+  },
+  "LogOutBtn": {
+    "label": "Log Out",
+    "Toast": {
+      "success": "Logged out successfully"
+    }
+  },
+  "Pages": {
+    "Home": {
+      "title": "Hello world!",
+      "subtitle": "Welcome to boilerplate fullstack Next.js.",
+      "Buttons": {
+        "dashboard": "Go to dashboard",
+        "login": "Go to login",
+        "register": "Go to register"
+      }
+    },
+    "NotFound": {
+      "title": "Page not found - 404",
+      "subtitle": "Sorry, the page you are looking for does not exist.",
+      "backToHomeBtn": "Go back to Homepage"
+    },
+    "Dashboard": {
+      "title": "Hello world from dashboard!",
+      "subtitle": "Welcome to boilerplate fullstack Next.js."
+    },
+    "Login": {
+      "title": "Login",
+      "subtitle": "Please login to continue",
+      "Form": {
+        "email": "Email",
+        "password": "Password",
+        "submit": "Login",
+        "Errors": {
+          "invalidCredentials": "Invalid credentials",
+          "unknownError": "Unknown error"
+        }
+      }
+    },
+    "Register": {
+      "title": "Register",
+      "subtitle": "Please register to continue",
+      "Form": {
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "submit": "Register",
+        "Errors": {
+          "userAlreadyExist": "User already exists",
+          "unknownError": "Unknown error"
+        }
+      }
+    }
+  }
+}
