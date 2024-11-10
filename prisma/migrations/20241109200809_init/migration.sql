@@ -48,7 +48,7 @@ CREATE TABLE "tasks" (
 CREATE TABLE "users" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "name" TEXT,
-    "email" TEXT,
+    "email" TEXT NOT NULL,
     "hashedPass" TEXT,
     "email_verified" DATETIME,
     "image" TEXT,
