@@ -2,11 +2,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui";
 import { auth } from "@/lib/auth";
 import { getTranslations } from "next-intl/server";
 import { RegisterForm } from "./register-form";
+import { redirect } from "next/navigation";
 
 
 export default async function RegisterPage() {
   const t = await getTranslations('Pages.Register');
   const session = await auth();
+
+  if (session?.user) return redirect("/");
 
   return (
     <Card className="flex flex-col gap-y-8 items-center justify-center">
@@ -16,7 +19,6 @@ export default async function RegisterPage() {
       <CardContent>
         <RegisterForm />
       </CardContent>
-      <p>{JSON.stringify(session)}</p>
     </Card>
   );
 }
