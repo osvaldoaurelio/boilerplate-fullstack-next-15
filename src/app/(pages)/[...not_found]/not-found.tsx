@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { LocaleToggle } from "@/components/locale";
+import { ThemeToggle } from "@/components/themes";
 
 export default function NotFoundPage() {
   const t = useTranslations('Pages.NotFound');

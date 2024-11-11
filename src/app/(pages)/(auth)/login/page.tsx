@@ -5,7 +5,7 @@ import { LoginForm } from "./login-form";
 
 
 export default async function LoginPage() {
-  const t = await getTranslations('Pages.Register');
+  const t = await getTranslations('Pages.Login');
   const session = await auth();
 
   return (

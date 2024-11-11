@@ -25,13 +25,13 @@ export async function loginAction(state: LoginActionState, formData: FormData) {
 
     if (err instanceof CredentialsSignin) {
       return {
-        message: "Erros.invalidCredentials",
+        message: "Errors.invalidCredentials",
         success: false,
       };
     }
 
     return {
-      message: "Erros.unknownError",
+      message: "Errors.unknownError",
       success: false,
     };
   }

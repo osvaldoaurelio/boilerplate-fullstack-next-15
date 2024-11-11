@@ -19,10 +19,11 @@ export function LogOutBtn() {
 
     try {
       await logoutAction();
+    } catch (err) {
     } finally {
       setIsLoggingOut(false);
-      toast({ description: t('Toast.success') });
       router.replace('/');
+      toast({ description: t('Toast.success') });
     }
   };
 

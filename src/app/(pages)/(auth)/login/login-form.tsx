@@ -17,7 +17,7 @@ export function LoginForm() {
     if (state && !state.success && state.message) {
       toast({
         title: "Error",
-        description: state.message,
+        description: t(state.message),
         variant: "destructive",
       });
     }
