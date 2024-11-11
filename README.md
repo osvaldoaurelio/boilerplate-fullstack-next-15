@@ -111,23 +111,34 @@ Para instalar e configurar o projeto:
 
 ```plaintext
 boilerplate-fullstack-next-15/
-├── prisma/             # Pasta do Prisma (esquema e migrações)
-│   └── schema.prisma   # Arquivo de definição de esquema do Prisma
-├── public/             # Arquivos públicos (imagens estáticas, favicon, etc.)
-├── src/                # Código-fonte principal do projeto
-│   ├── actions/        # Server actions (funções de servidor em Next.js)
-│   ├── app/            # Páginas do Next.js
-│   ├── assets/         # Recursos estáticos (imagens, fontes, etc.)
-│   ├── components/     # Componentes reutilizáveis
-│   │   └── ui/         # Componentes do shadcn/ui
-│   ├── constants/      # Constantes globais
-│   ├── hooks/          # Hooks personalizados
-│   ├── lib/            # Configurações e bibliotecas
-│   ├── middleware/     # Middlewares do Next.js
-│   ├── styles/         # Estilos globais e CSS personalizados
-│   └── types/          # Tipos e interfaces personalizados
-├── .env.example        # Arquivo de exemplo para variáveis de ambiente
-└── README.md           # Documentação do projeto
+├── prisma/                      # Pasta do Prisma (esquema e migrações)
+│   └── schema/                  # Arquivos de definição de esquema do Prisma
+├── public/                      # Arquivos públicos (imagens estáticas, favicon, etc.)
+├── src/                         # Código-fonte principal do projeto
+│   ├── app/                     # Aplicativo principal do Next.js
+│   │   └── (pages)/             # Páginas do Next.js
+│   │   │    ├── (auth)/         # Páginas de autenticação
+│   │   │    ├── (private)/      # Páginas privadas
+│   │   │    ├── [...not_found]/ # Páginas de erro 404
+│   │   │    └── layout.tsx      # Root layout do Next.js
+│   │   └── api/                 # Rotas de API do Next.js
+│   ├── components/              # Componentes reutilizáveis
+│   │   └── ui/                  # Componentes do shadcn/ui
+│   ├── constants/               # Constantes globais
+│   ├── hooks/                   # Hooks personalizados
+│   ├── lib/                     # Configurações e bibliotecas
+│   ├── i18n/                    # Configurações de internacionalização
+│   │   └── messages/            # Arquivos de mensagens de tradução
+│   ├── server/                  # Funções de servidor
+│   │   │── actions/             # Server actions (funções de servidor em Next.js)
+│   │   └── services/            # Serviços de persistência
+│   ├── styles/                  # Estilos globais e CSS personalizados
+│   └── types/                   # Tipos e interfaces personalizados
+├── middleware.ts                # Middleware personalizado do Next.js
+├── .env.example                 # Arquivo de exemplo para variáveis de ambiente
+├── README.md                    # Documentação do projeto
+...                              # Outros arquivos de configuração
+└── tsconfigg.json               # Configurações do TypeScript
 ```
 
 ## Extras
