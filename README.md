@@ -110,13 +110,13 @@ Para instalar e configurar o projeto:
 ## Estrutura do Projeto
 
 ```plaintext
-boilerplate-fullstack-next-15/
+boilerplate-fullstack-next-15/   # Pasta raiz do projeto
 ├── prisma/                      # Pasta do Prisma (esquema e migrações)
 │   └── schema/                  # Arquivos de definição de esquema do Prisma
 ├── public/                      # Arquivos públicos (imagens estáticas, favicon, etc.)
 ├── src/                         # Código-fonte principal do projeto
 │   ├── app/                     # Aplicativo principal do Next.js
-│   │   └── (pages)/             # Páginas do Next.js
+│   │   ├── (pages)/             # Páginas do Next.js
 │   │   │    ├── (auth)/         # Páginas de autenticação
 │   │   │    ├── (private)/      # Páginas privadas
 │   │   │    ├── [...not_found]/ # Páginas de erro 404
@@ -130,14 +130,14 @@ boilerplate-fullstack-next-15/
 │   ├── i18n/                    # Configurações de internacionalização
 │   │   └── messages/            # Arquivos de mensagens de tradução
 │   ├── server/                  # Funções de servidor
-│   │   │── actions/             # Server actions (funções de servidor em Next.js)
+│   │   ├── actions/             # Server actions (funções de servidor em Next.js)
 │   │   └── services/            # Serviços de persistência
 │   ├── styles/                  # Estilos globais e CSS personalizados
 │   └── types/                   # Tipos e interfaces personalizados
 ├── middleware.ts                # Middleware personalizado do Next.js
 ├── .env.example                 # Arquivo de exemplo para variáveis de ambiente
 ├── README.md                    # Documentação do projeto
-...                              # Outros arquivos de configuração
+├── [...]                        # Outros arquivos de configuração
 └── tsconfigg.json               # Configurações do TypeScript
 ```
 

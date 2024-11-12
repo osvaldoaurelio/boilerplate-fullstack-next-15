@@ -3,20 +3,22 @@
 import { Button, Input, Label } from "@/components/ui";
 import { useToast } from "@/hooks/use-toast";
 import { registerAction } from "@/server/actions/auth";
+import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Form from "next/form";
-import { useActionState, useEffect } from "react";
+import { useActionState, useEffect, useState } from "react";
 
 export function RegisterForm() {
-  const t = useTranslations("Pages.Register.Form");
-
   const { toast } = useToast();
+  const t = useTranslations("Pages.Register.Form");
+  const [showPassword, setShowPassword] = useState(false);
   const [state, dispatch, isPending] = useActionState(registerAction, null);
 
+  const togglePasswordVisibility = () => setShowPassword(!showPassword);
+
   useEffect(() => {
-    if (state && !state.success && state.message) {
+    if (!state?.success && state?.message) {
       toast({
-        title: "Error",
         description: t(state.message),
         variant: "destructive",
       });
@@ -37,7 +39,12 @@ export function RegisterForm() {
 
       <div className="flex flex-col gap-y-1">
         <Label htmlFor="password">{t('password')}</Label>
-        <Input id="password" name="password" type="password" />
+        <div className="relative">
+          <Input id="password" name="password" type={showPassword ? 'text' : 'password'} className="pr-8" />
+          <div className="flex-col-center h-8 w-8 absolute right-0 bottom-0.5" onClick={togglePasswordVisibility}>
+            {showPassword ? <EyeIcon /> : <EyeOffIcon />}
+          </div>
+        </div>
       </div>
 
       <Button type="submit" aria-disabled={isPending}>{t('submit')}</Button>

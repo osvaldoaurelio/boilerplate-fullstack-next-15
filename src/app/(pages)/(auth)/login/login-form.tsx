@@ -35,7 +35,7 @@ export function LoginForm() {
         <Input id="password" name="password" type="password" />
       </div>
 
-      <Button type="submit" aria-busy={isPending} aria-disabled={isPending}>{t('submit')}</Button>
+      <Button type="submit" aria-disabled={isPending}>{t('submit')}</Button>
     </Form>
   );
 }

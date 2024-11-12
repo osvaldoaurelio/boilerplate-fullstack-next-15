@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "title": "Boilerplate fullstack Next.js",
+    "description": "Um modelo escalável para construir aplicativos web de alto desempenho com Next.js 15."
+  },
   "ThemeToggle": {
     "title": "Alternar tema",
     "light": "Claro",
@@ -37,12 +41,14 @@
       "subtitle": "Bem-vindo ao boilerplate fullstack Next.js."
     },
     "Login": {
-      "title": "Login",
-      "subtitle": "Por favor, faça login para continuar",
+      "altLogo": "Entrar",
+      "forgotPass": "Esqueceu sua senha?",
+      "dontHaveAccount": "Não tem uma conta?",
+      "signUp": "Registre-se",
       "Form": {
         "email": "Email",
         "password": "Senha",
-        "submit": "Login",
+        "submit": "Entrar",
         "Errors": {
           "invalidCredentials": "Credenciais inválidas",
           "unknownError": "Erro desconhecido"
@@ -50,18 +56,32 @@
       }
     },
     "Register": {
-      "title": "Cadastro",
-      "subtitle": "Por favor, registre-se para continuar",
+      "altLogo": "Cadastro",
+      "alreadyHaveAccount": "Já tem uma conta?",
+      "signIn": "Entrar aqui",
       "Form": {
         "name": "Nome",
         "email": "Email",
         "password": "Senha",
         "submit": "Cadastrar",
         "Errors": {
+          "requiredFields": "Os campos são obrigatórios",
           "userAlreadyExist": "Usuário já existe",
           "unknownError": "Erro desconhecido"
         }
       }
+    }
+  },
+  "Components": {
+    "Layout": {
+      "Header": {
+        "Buttons": {
+          "dashboard": "Dashboard",
+          "login": "Login",
+          "register": "Cadastro"
+        }
+      },
+      "Footer": {}
     }
   }
 }

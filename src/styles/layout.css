@@ -5,4 +5,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .flex-col-center {
+    @apply flex flex-col justify-center items-center gap-y-2;
+  }
+
+  .flex-row-center {
+    @apply flex flex-row justify-center items-center gap-x-2;
+  }
+
+  .main {
+    @apply flex-col-center flex-1 mt-24 gap-y-4;
+  }
 }

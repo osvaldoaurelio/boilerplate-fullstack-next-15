@@ -7,7 +7,7 @@ export default async function Layout({ children }: DashboardLayoutProps) {
   if (!session?.user) return redirect("/login");
 
   return (
-    <div className="flex flex-col gap-y-8 items-center justify-center min-h-screen">
+    <div className="flex-col-center min-h-screen">
       <h1>{session?.user?.name}</h1>
       {children}
     </div>

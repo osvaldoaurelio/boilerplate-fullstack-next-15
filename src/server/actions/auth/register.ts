@@ -16,6 +16,11 @@ export async function registerAction(state: RegisterActionState, formData: FormD
   const email = formData.get("email")?.toString() ?? '';
   const password = formData.get("password")?.toString() ?? '';
 
+  if (!name || !email || !password) return {
+    message: 'Errors.requiredFields',
+    success: false,
+  };
+
   const userExist = await getUserByEmail(email);
   if (userExist) return {
     message: 'Errors.userAlreadyExist',

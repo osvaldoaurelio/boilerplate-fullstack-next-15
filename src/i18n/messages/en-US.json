@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "title": "Boilerplate fullstack Next.js",
+    "description": "A scalable template for building high-performance web applications with Next.js 15."
+  },
   "ThemeToggle": {
     "title": "Toggle theme",
     "light": "Light",
@@ -37,8 +41,10 @@
       "subtitle": "Welcome to boilerplate fullstack Next.js."
     },
     "Login": {
-      "title": "Login",
-      "subtitle": "Please login to continue",
+      "altLogo": "Login",
+      "forgotPass": "Forgot password?",
+      "dontHaveAccount": "Don't have an account?",
+      "signUp": "Sign up",
       "Form": {
         "email": "Email",
         "password": "Password",
@@ -50,18 +56,32 @@
       }
     },
     "Register": {
-      "title": "Register",
-      "subtitle": "Please register to continue",
+      "altLogo": "Register",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in",
       "Form": {
         "name": "Name",
         "email": "Email",
         "password": "Password",
         "submit": "Register",
         "Errors": {
+          "requiredFields": "The fields are required",
           "userAlreadyExist": "User already exists",
           "unknownError": "Unknown error"
         }
       }
+    }
+  },
+  "Components": {
+    "Layout": {
+      "Header": {
+        "Buttons": {
+          "dashboard": "Dashboard",
+          "login": "Login",
+          "register": "Register"
+        }
+      },
+      "Footer": {}
     }
   }
 }
