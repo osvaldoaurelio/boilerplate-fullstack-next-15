@@ -8,6 +8,8 @@ export const credencialsProvider = CredentialsProviderConfig({
     password: {},
   },
   async authorize(credentials) {
+    console.log({ credentials });
+
     if (typeof credentials?.email !== 'string' || typeof credentials?.password !== 'string') return null;
 
     const user = await getUserByEmail(credentials.email);

@@ -40,8 +40,10 @@ CREATE TABLE "tasks" (
     "description" TEXT,
     "priority" TEXT DEFAULT 'low',
     "isDone" BOOLEAN DEFAULT false,
+    "user_id" TEXT NOT NULL,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
+    "updatedAt" DATETIME NOT NULL,
+    CONSTRAINT "tasks_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "users" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateTable

@@ -50,6 +50,10 @@
         "password": "Contraseña",
         "submit": "Iniciar sesión",
         "Errors": {
+          "minLength": "El campo debe tener al menos {MIN_LENGTH} caracteres",
+          "maxLength": "La longitud máxima del campo es de {MAX_LENGTH} caracteres",
+          "invalidEmail": "El correo electrónico no es válido",
+          "invalidFields": "Los campos son inválidos",
           "invalidCredentials": "Credenciales inválidas",
           "unknownError": "Error desconocido"
         }
@@ -65,7 +69,10 @@
         "password": "Contraseña",
         "submit": "Registrar",
         "Errors": {
-          "requiredFields": "Los campos son requeridos",
+          "minLength": "El campo debe tener al menos {MIN_LENGTH} caracteres",
+          "maxLength": "La longitud máxima del campo es de {MAX_LENGTH} caracteres",
+          "invalidEmail": "El correo electrónico no es válido",
+          "invalidFields": "Los campos son inválidos",
           "userAlreadyExist": "El usuario ya existe",
           "unknownError": "Error desconocido"
         }
@@ -81,7 +88,9 @@
           "register": "Registro"
         }
       },
-      "Footer": {}
+      "Footer": {
+        "title": "Boilerplate fullstack Next.js"
+      }
     }
   }
 }

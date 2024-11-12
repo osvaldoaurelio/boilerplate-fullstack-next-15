@@ -6,16 +6,6 @@ import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import type { LayoutProps as RootLayoutProps } from "@/types/pages";
 import "@/styles/globals.css";
 
-export async function generateMetadata() {
-  const t = await getTranslations('Metadata');
-
-  return {
-    title: t('title'),
-    description: t('description'),
-    icons: { icon: "/favicon.svg", other: { url: "/favicon.ico" } },
-  };
-}
-
 export default async function RootLayout({ children }: RootLayoutProps) {
   const [locale, messages] = await Promise.all([getLocale(), getMessages()]);
 

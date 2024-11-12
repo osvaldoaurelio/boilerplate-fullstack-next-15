@@ -2,38 +2,37 @@
 
 import { signIn } from "@/lib/auth";
 import { createUser, getUserByEmail } from "@/server/services/user";
-import { hash } from "bcryptjs";
+import { ActionState } from "@/types/auth";
+import { RegisterInput, registerSchema } from "@/validations/auth";
 import { isRedirectError } from "next/dist/client/components/redirect";
-import { redirect } from "next/navigation";
 
-type RegisterActionState = {
-  message: string;
-  success: boolean;
-} | null;
-
-export async function registerAction(state: RegisterActionState, formData: FormData) {
-  const name = formData.get("name")?.toString() ?? '';
-  const email = formData.get("email")?.toString() ?? '';
-  const password = formData.get("password")?.toString() ?? '';
-
-  if (!name || !email || !password) return {
-    message: 'Errors.requiredFields',
-    success: false,
+export async function registerAction(prevState: ActionState<RegisterInput>, formData: FormData) {
+  const formDataObj = {
+    name: formData.get("name")?.toString() ?? '',
+    email: formData.get("email")?.toString() ?? '',
+    password: formData.get("password")?.toString() ?? '',
   };
 
-  const userExist = await getUserByEmail(email);
-  if (userExist) return {
-    message: 'Errors.userAlreadyExist',
-    success: false,
-  }
+  const { success, data, error } = registerSchema.safeParse(formDataObj);
+  if (!success) return {
+    ...prevState,
+    data: { ...prevState.data, ...formDataObj },
+    message: 'Errors.invalidFields',
+    errors: error.flatten().fieldErrors,
+  };
 
   try {
-    const hashedPass = await hash(password, 10);
-    await createUser(name, email, hashedPass);
+    const userExist = await getUserByEmail(data.email);
+    if (userExist) return {
+      ...prevState,
+      data: { ...prevState.data, ...formDataObj },
+      message: 'Errors.userAlreadyExist',
+      errors: { email: 'Errors.userAlreadyExist' },
+    }
 
+    await createUser(data);
     return await signIn("credentials", {
-      email,
-      password,
+      ...data,
       redirect: true,
       redirectTo: "/",
     });
@@ -41,8 +40,10 @@ export async function registerAction(state: RegisterActionState, formData: FormD
     if (isRedirectError(err)) throw err;
 
     return {
+      ...prevState,
+      data: { ...prevState.data, ...formDataObj },
       message: 'Errors.unknownError',
-      success: false,
+      errors: {},
     };
   }
 }
